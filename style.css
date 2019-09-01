@@ -9,3 +9,8 @@
     background-size: cover;
     overflow: hidden;
 }
+
+.navbar-nav:hover {
+	color: #543d79;
+	font-style: bold; 
+}
