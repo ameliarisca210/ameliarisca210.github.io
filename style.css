@@ -3,14 +3,40 @@
 }
  .jumbotron {
     position: relative;
-    background: url("images/head.png") center center;
+    background:  url("images/head.png") center center;
     width: 100%;
     height: 100%;
     background-size: cover;
     overflow: hidden;
 }
 
+.navbar {
+	transition: background .3s;
+}
+
 .navbar-nav:hover {
 	color: #543d79;
 	font-style: bold; 
+}
+
+
+/*how to zoom */
+.zoom	{
+	padding: 50px;
+	transition: transform .2s;
+	
+}
+
+.zoom:hover	{
+	transform: scale(1.2);
+}
+
+.zoom-img	{
+	padding: 5px;
+	transition: transform.2s;
+	margin: 0 auto;
+}
+
+.zoom-img:hover	{
+	transform: scale(1.2);
 }
