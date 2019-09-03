@@ -15,14 +15,7 @@ html	{
     overflow: hidden;
 }
 
-.navbar {
-	transition: background .3s;
-}
 
-.navbar-nav:hover {
-	color: #543d79;
-	font-style: bold; 
-}
 
 
 /*how to zoom */
@@ -55,3 +48,7 @@ html	{
 	width: 100%;
 	max-height: 500px !important;
 }
+
+
+
+

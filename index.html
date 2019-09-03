@@ -1,3 +1,4 @@
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -6,12 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+
+    <!-- custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- font awesome-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- 
-
+    <link rel="stylesheet" href="font/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css">
+    
     <title>R.Portfolio</title>
 
 
@@ -32,11 +35,64 @@
 
 
 
+    <style type="text/css">
+      /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/*#main {
+  transition: margin-left .5s;
+}
+*/
+footer {
+  transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+}
+    </style>
+
+
 
   </head>
   <body>
-    <!--navbar-->
-
+    <!--navbar
 
 
 
@@ -57,7 +113,8 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
-          </li>
+          </li>-->
+
           <!--
           <li class="nav-item">
             <a class="nav-link" href="#exercises">Exercises</a>
@@ -66,6 +123,7 @@
             <a class="nav-link" href="#">Work</a>
           </li>
         -->
+        <!--
           <li class="nav-item disable">
             <a class="nav-link " href="#project" tabindex="-1" aria-disabled="true">Project</a>
           </li>
@@ -75,6 +133,34 @@
         </ul>
       </div>
     </nav>
+    -->
+
+    <nav class="navbar fixed-top">
+      <!--
+      <div id="mySidenav" class="sidenav">
+       
+        <a href="#home" class="nav-link bg-info text-right" id="navHome"><i class="fas fa-home"></i></a> <br>
+        <a href="#about" class="nav-link bg-info text-right" id="navAbout"><i class="fas fa-user"></i></a>
+        <a href="#project" class="nav-link bg-info text-right" id="navProjects"><i class="fas fa-tasks"></i></a>
+        <a href="#contact" class="nav-link bg-info text-right" id="navContact"><i class="fas fa-address-book"></i></a>
+      </div>
+    -->
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#project" class="nav-link">Project</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <!-- Use any element to open the sidenav -->
+    <i class="fas fa-bars" onclick="openNav()"></i>
+    </nav>
+
+
+    <div class="bg"></div>
+    <div></div>
+
 
     <div class="jumbotron jumbotron-fluid text-center" id="home">
       <br>
@@ -86,7 +172,7 @@
       <br>
       <br>
       <br>
-      <h1 class="lead"><b>I'm a begginer Web Developer</b></h1>
+      <h1 class="display-6"><b>I'm a begginer Web Developer</b></h1>
       
       <hr class="my-4">
       learn more about what i do
@@ -97,31 +183,43 @@
     <div class="container">
       <!--row in bootstrap-->
       <div class="row pt-5 pb-5" id="about" >
-        <div class="col-md-6 text-center pt-5">
+        <div class="col-md-6 text-center pt-5 pl-5">
           <center>
-            <div class="card zoom w-75 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
-            <img src="images/me.jpg" class="card-img-top" alt="...">
+
+            <div class="card zoom  shadow mb-5 bg-white rounded" style="width: 18rem;">
+              <!-- card image -->
+              <img src="images/me.jpg" class="card-img-top" alt="...">
+
+              <!-- card body -->
               <div class="card-body">
-                <p class="card-text"><h5>i'm Riska Amellya</h5></p>
-                <p class="text-muted">Currently study at <a href="http://konohamaru.id/" target="blank" style="text-decoration: none;">Konohamaru</a>
-                  <br>
+                <h3 class="card-title">Riska Amellya</h3><br>
+                <p class="lead">Web Developer</p> <br>
+                <p class="blockquote-footer">Training in <a href="http://konohamaru.id/" class=" text-decoration-none">Konohamaru</a></p>
                   <a href="https://web.facebook.com/amell.zhaadwechh" target="blank" style="text-decoration: none;">
-                    <img src="images/logo-fb.png" class="zoom-img img-fluide" width="50">
+                    <i class="fab fa-facebook faa-float animated-hover"></i>
                   </a>
-                  <a href="https://api.whatsapp.com/send?phone=+6282122785219&text=let's%20talk" target="blank" style="text-decoration: none;">
-                    <img src="images/logo-wa.png" class="zoom-img img-fluide" width="40">
+                  <a href="https://api.whatsapp.com/send?phone=+6282122785219&text=let's%20talk" target="blank" style="text-decoration: none">
+                    <i class="fab fa-whatsapp faa-float animated-hover"></i>
                   </a>
                   <a href="https://github.com/ameliarisca210/" target="blank" style="text-decoration: none;">
-                    <img src="images/logo-github.png" class="zoom-img img-fluide" width="40">
+                    <i class="fab fa-github faa-float animated-hover"></i>
                   </a>
-                </p>
+              </div>
+
+              <!-- card footer -->
+              <div class="card-footer bg-dark text-white text-bold">
+                <h5>
+                  <a href="#contact" class="text-white text-decoration-none">Contact</a>
+                </h5>
               </div>
             </div>
           </center>
         </div>
-        <div class="col-md-6 text-center pt-5">
+
+        <!-- lorem card 
+        <div class="col-md-6 text-center pt-5 pl-5">
           <center>
-            <div class="card w-75 shadow p-3 mb-5 bg-white rounded zoom" style="width: 18rem;">
+            <div class="card shadow mb-5 bg-white rounded" style="width: 18rem;" >
               <div class="card-body">
                 <h5 class="card-title display-4">What I Do</h5>
               </div>
@@ -137,29 +235,70 @@
                 <li class="list-group-item">
                   <h4 class="text-dark"><b>Back End</b></h4>
                   <div>
-                    <img src="images/codeigniter-logo.png" class="zoom-img img-fluide">
+                    <img src="images/codeigniter-logo.png" class="zoom-img img-fluide" class="img-fluide">
                   </div>
                 </li>
                 <li class="list-group-item">
                   <h4 style="color: grey;"><b>CMS</b></h4>
                   <div>
-                    <img src="images/wordpress.png" class="zoom-img img-fluide">
+                    <img src="images/wordpress.png" class="zoom-img img-fluide" class="img-fluide">
+                  </div>
+                </li>
+              </ul>-->
+              <!-- card footer -->
+              <!--<div class="card-footer text-white ">
+                  <p class="blockquote-footer">never give up to upgrade skill</p>
+              </div>
+            </div>
+            
+          </center>
+        </div>-->
+        <!-- end lorem card -->
+
+        <div class="col-md-6 text-center pt-5 pl-5">
+          <center>
+            <div class="card shadow mb-5 bg-white rounded" style="width: 18rem;" >
+              <div class="card-body">
+                <h5 class="card-title display-4">What I Do</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item ">
+                  <h4 class="text-info"><b>Front End</b></h4>
+                  <div class="carousel-item active">
+                    <img src="images/css3.png" class="zoom-img img-fluide" alt="..." width="70">
+                    <img src="images/bootstrap.png" class="zoom-img img-fluide"  alt="..." width="50">
+                    <img src="images/js-logo.png" class="zoom-img img-fluide" alt="..." width="70">
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <h4 class="text-dark"><b>Back End</b></h4>
+                  <div>
+                    <img src="images/codeigniter-logo.png" class="zoom-img img-fluide" class="img-fluide">
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <h4 style="color: grey;"><b>CMS</b></h4>
+                  <div>
+                    <img src="images/wordpress.png" class="zoom-img img-fluide" class="img-fluide">
                   </div>
                 </li>
               </ul>
-            
+              <!-- card footer -->
+              <div class="card-footer text-white ">
+                  <p class="blockquote-footer">never give up to upgrade skill</p>
+              </div>
             </div>
           </center>
+        </div>
         </div>
       </div>
     </div>    
     
     
     <div class="col-xl-12 pt-5 pb-5" style="background:#e9e9e9;" id="project">
-      <div class="container">
-        <br>  
-        <br>  
-        <br>  
+      <div class="container container-fluid">
+        <br>
+        <br>
         <!--
         <div class="bd-example">
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -203,44 +342,77 @@
         </div>
       -->
 
-        <div class="card-group">
-          <div class="card shadow bg-white rounded zoom">
-            <img src="images/project1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Coming Soon Project</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-              
+       <!-- <div class="card-group">-->
+        <div class="row">
+          <div class="col-md-4">
+            <center>
+            <div class="card shadow mb-5 bg-white rounded zoom" style="width: 18rem;">
+              <img src="images/project1.jpg" class="card-img-top" alt="..." width="100">
+              <div class="card-body">
+                <h5 class="card-title">Coming Soon Project</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+                
+              </div>
+
+              <div class="card-footer transparent text-white">
+                <h5>
+                  <a href="#" class="text-dark text-decoration-none blockquote-footer">Go to project</a> 
+                </h5>
+
+              </div>
             </div>
+            </center>
           </div>
-          &nbsp;  
-          <div class="card shadow bg-white rounded zoom">
-            <img src="images/project2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Coming Soon Project</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
+
+          <div class="col-md-4">
+            <center>
+            <div class="card shadow mb-5 bg-white rounded zoom " style="width: 18rem;">
+              <img src="images/project2.jpg" class="card-img-top" alt="..." width="100">
+              <div class="card-body">
+                <h5 class="card-title">Coming Soon Project</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              </div>
+              <div class="card-footer transparent text-white">
+                  <h5>
+                    <a href="#" class="text-dark text-decoration-none blockquote-footer">Go to project</a>
+                  </h5>
+              </div>
             </div>
+            </center>
           </div>
-          &nbsp;
-          <div class="card shadow bg-white rounded zoom">
-            <img src="images/project3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Coming Soon Project</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
+          <div class="col-md-4">
+            <center>
+            <div class="card shadow mb-5 bg-white rounded zoom" style="width: 18rem;">
+              <img src="images/project3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Coming Soon Project</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              </div>
+              <div class="card-footer transparent text-white">
+                <h5>
+                  <a href="#" class="text-dark text-decoration-none blockquote-footer">Go to project</a>
+                </h5>
             </div>
+            </div>
+            </center>
           </div>
         </div>
+          
+          
+          
+        </div>
 
-
-      </div>
+        <br>
+      <!--</div>-->
     </div>
 
     <div class="col-xl-12 pb-5 pt-5" style="width: 100%;" id="contact">
@@ -278,6 +450,12 @@
             </div>
       </div>
       
+      <div class="col-md-4"> 
+        <img src="images/contact-me.jpg" width="300">
+      </div>
+      
+
+
       <div class="col-md-6">
             <div class="form-group">
               <label for="message">Your Message</label>
@@ -302,9 +480,8 @@
           </div>
           
       </div>
-    </div>
-  
-    <footer >
+
+    <footer>
       <div class="bg-secondary text-white pt-3 pr-5 pb-1">
         <div class="row">
           <div  class=" col-md-6  pl-5">
@@ -316,7 +493,7 @@
           </p>
         </div>
         <div class="col-md-6 ">
-          <p class="text-right">&copy; 2019 <a href="https://ameliarisca210.github.io" style="text-decoration:none; color: #fff">R.Portfolio</a> with <span class="fa fa-heart"></span>  </p>
+          <p class="text-right">&copy; 2019 <a href="https://ameliarisca210.github.io" style="text-decoration:none; color: #fff">R.Portfolio</a> with <i class="fa fa-heart faa-pulse animated"></i>  </p>
         </div>
         </div>
         
@@ -324,7 +501,7 @@
       </div>
     </footer>
 
-
+</div>
 
 
 
@@ -336,6 +513,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
 
     <script type="text/javascript">
       
@@ -351,6 +529,24 @@
       }
 
 
+
+
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "150px";
+          document.getElementById("main").style.marginLeft = "150px";
+          document.getElementById("footer").style.marginLeft = "150px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+
+          document.getElementById("footer").style.marginLeft = "0";
+          document.body.style.backgroundColor = "white";
+        }
 
     </script>
 
